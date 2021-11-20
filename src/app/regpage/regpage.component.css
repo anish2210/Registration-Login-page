@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+.body {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgb(104, 104, 255), rgb(243, 107, 236));
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 20px 25px rgb(0 0 0 / 0.2);
+}
+
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.container .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 40px;
+  background: linear-gradient(135deg, rgb(104, 104, 255), rgb(243, 107, 236));
+}
+
+.container form .user-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .user-info .input {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+.user-info .input .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-info .input input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px 0px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+}
+
+.user-info .input input:focus,
+.user-info .input input:valid {
+  border-color: rgb(243, 107, 236);
+}
+
+form .gender-details .gender-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+form .gender-details .category {
+  display: flex;
+  width: 100%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+
+.gender-details .category label {
+  display: flex;
+  align-items: center;
+}
+
+.gender-details .category .dot {
+  height: 18px;
+  width: 18px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+  transition: all 0.2s ease;
+}
+
+#dot-1:checked ~ .category label .one {
+  border-color: #d9d9d9;
+  background: rgb(104, 104, 255);
+}
+#dot-2:checked ~ .category label .two {
+  border-color: #d9d9d9;
+  background: rgb(104, 104, 255);
+}
+#dot-3:checked ~ .category label .three {
+  border-color: #d9d9d9;
+  background: rgb(104, 104, 255);
+}
+
+form input[type='radio'] {
+  display: none;
+}
+
+form .button-1 {
+  height: 45px;
+  margin: 15px 0;
+}
+
+form .button-2 {
+  height: 45px;
+  margin: 15px 0;
+}
+
+form .button-1 input {
+  margin-right: 70px;
+  padding: 10px;
+  height: 100%;
+  float: left;
+  width: 40%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 0px 15px;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 5px rgb(0 0 0 / 0.2);
+  background: linear-gradient(135deg, rgb(104, 104, 255), rgb(243, 107, 236));
+}
+
+form .button-2 input {
+  padding: 10px;
+  height: 100%;
+  float: right;
+  width: 40%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 15px 0px;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 5px rgb(0 0 0 / 0.2);
+  background: linear-gradient(135deg, rgb(104, 104, 255), rgb(243, 107, 236));
+}
+
+.container form .buttons .login {
+  background-color: black;
+  justify-content: center;
+}
+
+.component .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* padding: vh; */
+}
+
+.gender {
+  padding: 5px;
+}
+
+form .button-1 input:hover {
+  background: linear-gradient(-135deg, rgb(104, 104, 255), rgb(243, 107, 236));
+}
+
+form .button-2 input:hover {
+  background: linear-gradient(-135deg, rgb(104, 104, 255), rgb(243, 107, 236));
+}
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user-info .input {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .gender-details .category {
+    width: 60%;
+    flex-wrap: wrap;
+  }
+  .container form .user-info {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-info::-webkit-scrollbar {
+    width: 0;
+  }
+  form .button-1 input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  form .button-2 input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
